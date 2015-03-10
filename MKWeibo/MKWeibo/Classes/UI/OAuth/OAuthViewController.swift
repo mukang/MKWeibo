@@ -51,9 +51,9 @@ extension ViewController: UIWebViewDelegate {
             
             let net = NetworkManager.sharedManager
             
-            net.requestJSON(.POST, "https://api.weibo.com/oauth2/access_token", params, completion: { (result, error) -> () in
+            net.requestJSON(.POST, "https://api.weibo.com/oauth2/access_token", params) { (result, error) -> () in
                 println(result)
-            })
+            }
             
             
         }

@@ -24,7 +24,7 @@ class SimpleNetwork {
     ///  :param: method    访问方法
     ///  :param: urlString 请求路径
     ///  :param: _params   参数字典
-    func requestJSON(method: HTTPMethod, _ urlString: String, _ params: [String: String]?, completion: Completion) {
+    func requestJSON(method: HTTPMethod, _ urlString: String, _ params: [String: String]?, _ completion: Completion) {
         
         // 实例化网络请求
         if let request = request(method, urlString, params) {

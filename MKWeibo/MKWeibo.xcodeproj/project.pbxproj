@@ -17,6 +17,7 @@
 		7A3F43E51AA9D0770086195E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A3F43E11AA9D0770086195E /* SVProgressHUD.bundle */; };
 		7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E31AA9D0770086195E /* SVProgressHUD.m */; };
 		7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */; };
+		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7A3F43E31AA9D0770086195E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetwork.swift; sourceTree = "<group>"; };
 		7A3F43E91AA9D11E0086195E /* MKWeibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKWeibo-Bridge.h"; sourceTree = "<group>"; };
+		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */,
 				7A3F43CF1AA9D06B0086195E /* NetworkManager.swift */,
+				7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */,
+				7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */,
 				7A3F43D91AA9D06B0086195E /* NetworkManager.swift in Sources */,
 				7A3F43DB1AA9D06B0086195E /* OAuthViewController.swift in Sources */,
 				7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */,
@@ -513,6 +517,7 @@
 				7A3F43C81AA9CFE90086195E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A3F43C91AA9CFE90086195E /* Build configuration list for PBXNativeTarget "MKWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				7A3F43CB1AA9CFE90086195E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
