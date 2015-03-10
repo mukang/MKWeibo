@@ -52,13 +52,18 @@ extension ViewController: UIWebViewDelegate {
             let net = NetworkManager.sharedManager
             
             net.requestJSON(.POST, "https://api.weibo.com/oauth2/access_token", params) { (result, error) -> () in
-                println(result)
+                
+                // 将结果转成AccessToken模型
+                let token = AccessToken(dict: result as! NSDictionary)
+                
+                token.saveAccessToken()
+                
             }
             
             
         }
         if !result.load {
-            println("不加载\(request.URL!)")
+//            println("不加载\(request.URL!)")
             
             // 点击取消的时候才需要重新加载页面
             if result.reloadPage {

@@ -18,6 +18,7 @@
 		7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E31AA9D0770086195E /* SVProgressHUD.m */; };
 		7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */; };
 		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
+		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetwork.swift; sourceTree = "<group>"; };
 		7A3F43E91AA9D11E0086195E /* MKWeibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKWeibo-Bridge.h"; sourceTree = "<group>"; };
 		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
+		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +131,8 @@
 		7A3F43CC1AA9D06B0086195E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7A3F43CD1AA9D06B0086195E /* BusinessModel */,
 				7A3F43CE1AA9D06B0086195E /* Tools */,
+				7A3F43CD1AA9D06B0086195E /* BusinessModel */,
 				7A3F43D01AA9D06B0086195E /* UI */,
 			);
 			path = Classes;
@@ -139,6 +141,7 @@
 		7A3F43CD1AA9D06B0086195E /* BusinessModel */ = {
 			isa = PBXGroup;
 			children = (
+				7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */,
 				7A3F43AD1AA9CFE90086195E /* AppDelegate.swift in Sources */,
 				7A3F43E41AA9D0770086195E /* SVIndefiniteAnimatedView.m in Sources */,
+				7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

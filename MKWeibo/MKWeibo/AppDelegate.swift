@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if let token = AccessToken.loadAccessToken() {
+            
+            println("\(token.debugDescription)")
+        }
+        
         return true
     }
 
