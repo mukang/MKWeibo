@@ -100,9 +100,7 @@ extension AccessToken: DebugPrintable {
         
         return "\(dict)"
     }
-        
-    
-    
+
 }
 
 

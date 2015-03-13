@@ -17,6 +17,17 @@
 		7A3F43E51AA9D0770086195E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A3F43E11AA9D0770086195E /* SVProgressHUD.bundle */; };
 		7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E31AA9D0770086195E /* SVProgressHUD.m */; };
 		7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */; };
+		7A64720E1AB286E20085895E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64720D1AB286E20085895E /* Main.storyboard */; };
+		7A6472101AB287430085895E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64720F1AB287430085895E /* MainViewController.swift */; };
+		7A6472121AB2875D0085895E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472111AB2875D0085895E /* TabBar.swift */; };
+		7A6472141AB2879C0085895E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6472131AB2879C0085895E /* Discover.storyboard */; };
+		7A6472161AB288330085895E /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472151AB288330085895E /* DiscoverViewController.swift */; };
+		7A6472181AB288760085895E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6472171AB288760085895E /* Home.storyboard */; };
+		7A64721A1AB288990085895E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472191AB288990085895E /* HomeViewController.swift */; };
+		7A64721C1AB288CA0085895E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64721B1AB288CA0085895E /* MessageViewController.swift */; };
+		7A64721E1AB288DA0085895E /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64721D1AB288DA0085895E /* Message.storyboard */; };
+		7A6472201AB289090085895E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64721F1AB289090085895E /* Profile.storyboard */; };
+		7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472211AB2892A0085895E /* ProfileViewController.swift */; };
 		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +61,17 @@
 		7A3F43E31AA9D0770086195E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetwork.swift; sourceTree = "<group>"; };
 		7A3F43E91AA9D11E0086195E /* MKWeibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKWeibo-Bridge.h"; sourceTree = "<group>"; };
+		7A64720D1AB286E20085895E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7A64720F1AB287430085895E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7A6472111AB2875D0085895E /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		7A6472131AB2879C0085895E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		7A6472151AB288330085895E /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		7A6472171AB288760085895E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7A6472191AB288990085895E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7A64721B1AB288CA0085895E /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		7A64721D1AB288DA0085895E /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		7A64721F1AB289090085895E /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		7A6472211AB2892A0085895E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,11 +181,11 @@
 		7A3F43D01AA9D06B0086195E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7A3F43D51AA9D06B0086195E /* OAuth */,
+				7A3F43D31AA9D06B0086195E /* Main */,
 				7A3F43D11AA9D06B0086195E /* Discover */,
 				7A3F43D21AA9D06B0086195E /* Home */,
-				7A3F43D31AA9D06B0086195E /* Main */,
 				7A3F43D41AA9D06B0086195E /* Message */,
-				7A3F43D51AA9D06B0086195E /* OAuth */,
 				7A3F43D81AA9D06B0086195E /* Profile */,
 			);
 			path = UI;
@@ -172,6 +194,8 @@
 		7A3F43D11AA9D06B0086195E /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				7A6472131AB2879C0085895E /* Discover.storyboard */,
+				7A6472151AB288330085895E /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -179,6 +203,8 @@
 		7A3F43D21AA9D06B0086195E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7A6472171AB288760085895E /* Home.storyboard */,
+				7A6472191AB288990085895E /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,6 +212,9 @@
 		7A3F43D31AA9D06B0086195E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7A64720D1AB286E20085895E /* Main.storyboard */,
+				7A64720F1AB287430085895E /* MainViewController.swift */,
+				7A6472111AB2875D0085895E /* TabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -193,6 +222,8 @@
 		7A3F43D41AA9D06B0086195E /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				7A64721B1AB288CA0085895E /* MessageViewController.swift */,
+				7A64721D1AB288DA0085895E /* Message.storyboard */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -209,6 +240,8 @@
 		7A3F43D81AA9D06B0086195E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7A64721F1AB289090085895E /* Profile.storyboard */,
+				7A6472211AB2892A0085895E /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -317,7 +350,12 @@
 			files = (
 				7A3F43DA1AA9D06B0086195E /* OAuth.storyboard in Resources */,
 				7A3F43E51AA9D0770086195E /* SVProgressHUD.bundle in Resources */,
+				7A6472201AB289090085895E /* Profile.storyboard in Resources */,
+				7A6472141AB2879C0085895E /* Discover.storyboard in Resources */,
+				7A6472181AB288760085895E /* Home.storyboard in Resources */,
 				7A3F43B41AA9CFE90086195E /* Images.xcassets in Resources */,
+				7A64720E1AB286E20085895E /* Main.storyboard in Resources */,
+				7A64721E1AB288DA0085895E /* Message.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,13 +374,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */,
+				7A64721C1AB288CA0085895E /* MessageViewController.swift in Sources */,
 				7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */,
 				7A3F43D91AA9D06B0086195E /* NetworkManager.swift in Sources */,
+				7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */,
 				7A3F43DB1AA9D06B0086195E /* OAuthViewController.swift in Sources */,
 				7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */,
 				7A3F43AD1AA9CFE90086195E /* AppDelegate.swift in Sources */,
+				7A6472101AB287430085895E /* MainViewController.swift in Sources */,
 				7A3F43E41AA9D0770086195E /* SVIndefiniteAnimatedView.m in Sources */,
+				7A6472161AB288330085895E /* DiscoverViewController.swift in Sources */,
 				7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */,
+				7A6472121AB2875D0085895E /* TabBar.swift in Sources */,
+				7A64721A1AB288990085895E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
