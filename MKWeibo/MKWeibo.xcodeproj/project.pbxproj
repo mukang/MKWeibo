@@ -28,6 +28,7 @@
 		7A64721E1AB288DA0085895E /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64721D1AB288DA0085895E /* Message.storyboard */; };
 		7A6472201AB289090085895E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64721F1AB289090085895E /* Profile.storyboard */; };
 		7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472211AB2892A0085895E /* ProfileViewController.swift */; };
+		7A64722A1AB2EAD40085895E /* UIView+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472291AB2EAD40085895E /* UIView+MK.m */; };
 		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		7A64721D1AB288DA0085895E /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		7A64721F1AB289090085895E /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7A6472211AB2892A0085895E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7A6472281AB2EAD40085895E /* UIView+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MK.h"; sourceTree = "<group>"; };
+		7A6472291AB2EAD40085895E /* UIView+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MK.m"; sourceTree = "<group>"; };
 		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +177,8 @@
 				7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */,
 				7A3F43CF1AA9D06B0086195E /* NetworkManager.swift */,
 				7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */,
+				7A6472281AB2EAD40085895E /* UIView+MK.h */,
+				7A6472291AB2EAD40085895E /* UIView+MK.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -222,8 +227,8 @@
 		7A3F43D41AA9D06B0086195E /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				7A64721B1AB288CA0085895E /* MessageViewController.swift */,
 				7A64721D1AB288DA0085895E /* Message.storyboard */,
+				7A64721B1AB288CA0085895E /* MessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */,
+				7A64722A1AB2EAD40085895E /* UIView+MK.m in Sources */,
 				7A64721C1AB288CA0085895E /* MessageViewController.swift in Sources */,
 				7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */,
 				7A3F43D91AA9D06B0086195E /* NetworkManager.swift in Sources */,

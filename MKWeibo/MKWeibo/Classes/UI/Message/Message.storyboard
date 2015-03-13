@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--消息-->
         <scene sceneID="0VP-D5-EiP">
             <objects>
                 <tableViewController id="OkC-H1-p4J" customClass="MessageViewController" customModule="MKWeibo" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                             <outlet property="delegate" destination="OkC-H1-p4J" id="auz-LB-wgw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Z1U-No-WYk"/>
+                    <navigationItem key="navigationItem" title="消息" id="Z1U-No-WYk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joA-dO-6kA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

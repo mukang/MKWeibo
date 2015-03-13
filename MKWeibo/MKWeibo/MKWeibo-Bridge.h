@@ -7,6 +7,7 @@
 //
 
 #import "SVProgressHUD.h"
+#import "UIView+MK.h"
 
 #ifndef MKWeibo_MKWeibo_Bridge_h
 #define MKWeibo_MKWeibo_Bridge_h
