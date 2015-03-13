@@ -19,9 +19,16 @@ class MainViewController: UITabBarController {
         ///  添加子控制器
         addChildControllers()
         
+        weak var weakSelf = self
         // 给闭包赋值
         mainTabBar.composeBtnClicked = {
-            println("hello")
+            
+            // modal出撰写微博的视图控制器
+            let sb = UIStoryboard(name: "Compose", bundle: nil)
+            
+            let composeVC = sb.instantiateInitialViewController() as! UINavigationController
+            
+            weakSelf!.presentViewController(composeVC, animated: true, completion: nil)
         }
 
     }

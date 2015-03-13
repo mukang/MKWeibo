@@ -29,6 +29,8 @@
 		7A6472201AB289090085895E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64721F1AB289090085895E /* Profile.storyboard */; };
 		7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472211AB2892A0085895E /* ProfileViewController.swift */; };
 		7A64722A1AB2EAD40085895E /* UIView+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472291AB2EAD40085895E /* UIView+MK.m */; };
+		7A64722D1AB3294D0085895E /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64722C1AB3294D0085895E /* Compose.storyboard */; };
+		7A64722F1AB329D20085895E /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64722E1AB329D20085895E /* ComposeViewController.swift */; };
 		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		7A6472211AB2892A0085895E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A6472281AB2EAD40085895E /* UIView+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MK.h"; sourceTree = "<group>"; };
 		7A6472291AB2EAD40085895E /* UIView+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MK.m"; sourceTree = "<group>"; };
+		7A64722C1AB3294D0085895E /* Compose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
+		7A64722E1AB329D20085895E /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3F43D51AA9D06B0086195E /* OAuth */,
+				7A64722B1AB3293D0085895E /* Compose */,
 				7A3F43D31AA9D06B0086195E /* Main */,
 				7A3F43D11AA9D06B0086195E /* Discover */,
 				7A3F43D21AA9D06B0086195E /* Home */,
@@ -270,6 +275,15 @@
 				7A3F43E31AA9D0770086195E /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		7A64722B1AB3293D0085895E /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				7A64722C1AB3294D0085895E /* Compose.storyboard */,
+				7A64722E1AB329D20085895E /* ComposeViewController.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +374,7 @@
 				7A6472181AB288760085895E /* Home.storyboard in Resources */,
 				7A3F43B41AA9CFE90086195E /* Images.xcassets in Resources */,
 				7A64720E1AB286E20085895E /* Main.storyboard in Resources */,
+				7A64722D1AB3294D0085895E /* Compose.storyboard in Resources */,
 				7A64721E1AB288DA0085895E /* Message.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +404,7 @@
 				7A3F43AD1AA9CFE90086195E /* AppDelegate.swift in Sources */,
 				7A6472101AB287430085895E /* MainViewController.swift in Sources */,
 				7A3F43E41AA9D0770086195E /* SVIndefiniteAnimatedView.m in Sources */,
+				7A64722F1AB329D20085895E /* ComposeViewController.swift in Sources */,
 				7A6472161AB288330085895E /* DiscoverViewController.swift in Sources */,
 				7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */,
 				7A6472121AB2875D0085895E /* TabBar.swift in Sources */,

@@ -22,9 +22,13 @@ class TabBar: UITabBar {
     // 重写此方法会使TabBar的背景色消失
     override func layoutSubviews() {
         
+        super.layoutSubviews()
+        
         // 设置按钮位置及尺寸
         setButtonsFrame()
     }
+    
+    
     
     // 设置按钮位置及尺寸
     func setButtonsFrame() {
@@ -39,7 +43,7 @@ class TabBar: UITabBar {
         // 遍历子控件
         for view in self.subviews as! [UIView] {
             
-            if !(view is UIButton) {
+            if view is UIControl && !(view is UIButton) {
                 
                 let btnFrame = CGRectMake(btnW * index, 0, btnW, btnH)
                 

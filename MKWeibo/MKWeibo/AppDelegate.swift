@@ -21,7 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            println("\(token.debugDescription)")
 //        }
         
+        setNavigationBarColor()
+        
         return true
+    }
+    
+    func setNavigationBarColor() {
+        
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
 
     func applicationWillResignActive(application: UIApplication) {
