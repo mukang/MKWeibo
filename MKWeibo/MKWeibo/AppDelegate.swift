@@ -21,13 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            println("\(token.debugDescription)")
 //        }
         
+        // 统一设置导航栏
         setNavigationBarColor()
         
         return true
     }
     
+    
     func setNavigationBarColor() {
         
+        // 一经设置全局有效
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
 

@@ -31,6 +31,8 @@
 		7A64722A1AB2EAD40085895E /* UIView+MK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472291AB2EAD40085895E /* UIView+MK.m */; };
 		7A64722D1AB3294D0085895E /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64722C1AB3294D0085895E /* Compose.storyboard */; };
 		7A64722F1AB329D20085895E /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64722E1AB329D20085895E /* ComposeViewController.swift */; };
+		7A6BCBDA1AB67AD300F67567 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BCBD91AB67AD300F67567 /* UserInfo.swift */; };
+		7A6BCBDC1AB67D5600F67567 /* StatusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BCBDB1AB67D5600F67567 /* StatusesData.swift */; };
 		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		7A6472291AB2EAD40085895E /* UIView+MK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MK.m"; sourceTree = "<group>"; };
 		7A64722C1AB3294D0085895E /* Compose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
 		7A64722E1AB329D20085895E /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		7A6BCBD91AB67AD300F67567 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		7A6BCBDB1AB67D5600F67567 /* StatusesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesData.swift; sourceTree = "<group>"; };
 		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */,
+				7A6BCBD91AB67AD300F67567 /* UserInfo.swift */,
+				7A6BCBDB1AB67D5600F67567 /* StatusesData.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				7A64721C1AB288CA0085895E /* MessageViewController.swift in Sources */,
 				7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */,
 				7A3F43D91AA9D06B0086195E /* NetworkManager.swift in Sources */,
+				7A6BCBDA1AB67AD300F67567 /* UserInfo.swift in Sources */,
 				7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */,
 				7A3F43DB1AA9D06B0086195E /* OAuthViewController.swift in Sources */,
 				7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */,
@@ -405,6 +412,7 @@
 				7A6472101AB287430085895E /* MainViewController.swift in Sources */,
 				7A3F43E41AA9D0770086195E /* SVIndefiniteAnimatedView.m in Sources */,
 				7A64722F1AB329D20085895E /* ComposeViewController.swift in Sources */,
+				7A6BCBDC1AB67D5600F67567 /* StatusesData.swift in Sources */,
 				7A6472161AB288330085895E /* DiscoverViewController.swift in Sources */,
 				7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */,
 				7A6472121AB2875D0085895E /* TabBar.swift in Sources */,
