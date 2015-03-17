@@ -19,6 +19,117 @@ class SimpleNetwork {
     // 定义闭包类型，类型别名，首字母一定要大写
     typealias Completion = (result: AnyObject?, error: NSError?) -> ()
     
+    // MARK: - 下载图片
+    
+    ///  缓存路径的常量
+    private static let imageCachePath = "com.mukang.imagecahce"
+    
+    ///  缓存图像的完成路径 - 懒加载
+    lazy var cachePath: String? = {
+        
+        // 1. cache
+        var path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as! String
+        
+        path = path.stringByAppendingPathComponent(imageCachePath)
+        
+        // 2. 检查缓存路径是否存在
+        var isDirectory: ObjCBool = true // 注意：必须准确地指出类型 ObjCBool
+        
+        // 无论存在目录还是文件，exist 都会返回 true，是否是路径由 isDirectory 来决定
+        let exist = NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDirectory)
+        
+        // 3. 如果有同名文件 - 干掉 （一定需要判断是否是文件，否则目录也同样会被删除）
+        if exist && !isDirectory {
+            
+            NSFileManager.defaultManager().removeItemAtPath(path, error: nil)
+        }
+        
+        // 4. 直接创建目录，如果存在目录就什么都不做
+        NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
+        
+        return path
+    }()
+    
+    
+    ///  下载多张图片
+    ///
+    ///  :param: urlStrings 图片 url 数组
+    ///  :param: completion 完成回调
+    func downloadImages(urlStrings: [String], completion: Completion) {
+        
+        // 希望所有图片下载完成，统一回调
+        
+        // 利用调度组统一监听一组异步任务执行完毕
+        let group = dispatch_group_create()
+        
+        // 遍历 urlStrings 数组
+        for urlString in urlStrings {
+            
+            // 进入调度组
+            dispatch_group_enter(group)
+            
+            downloadImage(urlString, completion: { (result, error) -> () in
+                
+                // 离开调度组
+                dispatch_group_leave(group)
+            })
+        }
+        
+        // 在主线程回调
+        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
+            
+            // 所有任务完成后的回调
+            completion(result: nil, error: nil)
+        }
+    }
+    
+    
+    ///  下载图像并保存到沙盒
+    ///
+    ///  :param: urlString  图片路径
+    ///  :param: completion 完成回调
+    func downloadImage(urlString: String, completion: Completion) {
+        
+        // 1. 将下载的图像 url 进行 md5
+        var path = urlString.md5
+        
+        // 2. 目标路径
+        path = cachePath!.stringByAppendingPathComponent(path)
+        
+        // 2.1 缓存检测，如果文件已经下载完成直接返回
+        if NSFileManager.defaultManager().fileExistsAtPath(path) {
+            
+            completion(result: nil, error: nil)
+            
+            return
+        }
+        
+        // 3. 下载图像
+        if let url = NSURL(string: urlString) {
+        
+            self.session!.downloadTaskWithURL(url, completionHandler: { (location, _, error) -> Void in
+                
+                // 错误处理
+                if error != nil {
+                    
+                    completion(result: nil, error: error)
+                    
+                    return
+                }
+                
+                // 将文件复制到缓存路径
+                NSFileManager.defaultManager().copyItemAtPath(location.path!, toPath: path, error: nil)
+                
+                // 直接回调，不传递任何参数
+                completion(result: nil, error: nil)
+                
+            }).resume()
+        }
+    }
+    
+    
+    // MARK: - 请求 JSON
+    
     ///  请求 JSON
     ///
     ///  :param: method    访问方法

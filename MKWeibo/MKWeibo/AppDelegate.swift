@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            
 //            println("\(token.debugDescription)")
 //        }
+//        println("\(SimpleNetwork().cachePath)")
+        
+//        SimpleNetwork().downloadImage("http://ww4.sinaimg.cn/thumbnail/6f1045a5jw1eq7xuvaf5gj20hs0dcgn2.jpg", completion: { (result, error) -> () in
+//            println("OK")
+//        })
         
         // 统一设置导航栏
         setNavigationBarColor()
