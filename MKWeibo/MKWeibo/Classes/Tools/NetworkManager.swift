@@ -29,4 +29,25 @@ class NetworkManager {
         net.requestJSON(method, urlString, params, completion)
     }
     
+    
+    ///  下载图像并保存到沙盒
+    ///
+    ///  :param: urlString  图片路径
+    ///  :param: completion 完成回调
+    func downloadImage(urlString: String, completion: Completion) {
+        
+        net.downloadImage(urlString, completion: completion)
+    }
+    
+    
+    ///  下载多张图片
+    ///
+    ///  :param: urlStrings 图片 url 数组
+    ///  :param: completion 完成回调
+    func downloadImages(urlStrings: [String], completion: Completion) {
+        
+        net.downloadImages(urlStrings, completion: completion)
+    }
+    
+    
 }

@@ -161,6 +161,7 @@ class SimpleNetwork {
                 
                 // 反序列化
                 let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: nil)
+                
                 // 判断反序列化是否成功
                 if json == nil {
                     let error = NSError(domain: SimpleNetwork.errorDomain, code: -2, userInfo: ["error": "反序列化失败"])
