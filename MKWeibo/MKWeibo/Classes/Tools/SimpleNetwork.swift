@@ -19,13 +19,15 @@ class SimpleNetwork {
     // 定义闭包类型，类型别名，首字母一定要大写
     typealias Completion = (result: AnyObject?, error: NSError?) -> ()
     
+    
+    
     // MARK: - 下载图片
     
     ///  缓存路径的常量
     private static let imageCachePath = "com.mukang.imagecahce"
     
     ///  缓存图像的完成路径 - 懒加载
-    lazy var cachePath: String? = {
+    private lazy var cachePath: String? = {
         
         // 1. cache
         var path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as! String
@@ -50,38 +52,6 @@ class SimpleNetwork {
         return path
     }()
     
-    
-    ///  下载多张图片
-    ///
-    ///  :param: urlStrings 图片 url 数组
-    ///  :param: completion 完成回调
-    func downloadImages(urlStrings: [String], completion: Completion) {
-        
-        // 希望所有图片下载完成，统一回调
-        
-        // 利用调度组统一监听一组异步任务执行完毕
-        let group = dispatch_group_create()
-        
-        // 遍历 urlStrings 数组
-        for urlString in urlStrings {
-            
-            // 进入调度组
-            dispatch_group_enter(group)
-            
-            downloadImage(urlString, completion: { (result, error) -> () in
-                
-                // 离开调度组
-                dispatch_group_leave(group)
-            })
-        }
-        
-        // 在主线程回调
-        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            
-            // 所有任务完成后的回调
-            completion(result: nil, error: nil)
-        }
-    }
     
     
     ///  下载图像并保存到沙盒
@@ -124,8 +94,48 @@ class SimpleNetwork {
                 completion(result: nil, error: nil)
                 
             }).resume()
+            
+        } else { // 如果 URL 创建不成功，回调错误
+            
+            let error = NSError(domain: SimpleNetwork.errorDomain, code: -1, userInfo: ["error": "无法创建 URL"])
+            
+            completion(result: nil, error: error)
         }
     }
+    
+    
+    ///  下载多张图片
+    ///
+    ///  :param: urlStrings 图片 url 数组
+    ///  :param: completion 完成回调
+    func downloadImages(urlStrings: [String], completion: Completion) {
+        
+        // 希望所有图片下载完成，统一回调
+        
+        // 利用调度组统一监听一组异步任务执行完毕
+        let group = dispatch_group_create()
+        
+        // 遍历 urlStrings 数组
+        for urlString in urlStrings {
+            
+            // 进入调度组
+            dispatch_group_enter(group)
+            
+            downloadImage(urlString, completion: { (result, error) -> () in
+                
+                // 离开调度组
+                dispatch_group_leave(group)
+            })
+        }
+        
+        // 在主线程回调
+        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
+            
+            // 所有任务完成后的回调
+            completion(result: nil, error: nil)
+        }
+    }
+
     
     
     // MARK: - 请求 JSON
@@ -181,7 +191,7 @@ class SimpleNetwork {
     ///  :param: method    访问方法
     ///  :param: urlString 请求路径
     ///  :param: _params   参数字典
-    func request(method: HTTPMethod, _ urlStirng: String, _ params: [String: String]?) -> NSURLRequest? {
+    private func request(method: HTTPMethod, _ urlStirng: String, _ params: [String: String]?) -> NSURLRequest? {
         
         var urlStr = urlStirng
         let query = queryString(params)
@@ -214,7 +224,7 @@ class SimpleNetwork {
     ///  :param: params 参数字典
     ///
     ///  :returns: 返回拼接好的字符串
-    func queryString(params: [String: String]?) -> String? {
+    private func queryString(params: [String: String]?) -> String? {
         
         // 判断参数是否为空
         if params == nil {
@@ -234,11 +244,11 @@ class SimpleNetwork {
     
     
     /// 全局的网络会话
-    lazy var session: NSURLSession? = {
+    private lazy var session: NSURLSession? = {
         return NSURLSession.sharedSession()
     }()
     
     /// 类属性
-    static let errorDomain = "com.mukang.error"
+    private static let errorDomain = "com.mukang.error"
     
 }
