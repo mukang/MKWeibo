@@ -8,6 +8,9 @@
 
 import UIKit
 
+///  定义一个全局的通知字符串
+let WB_Login_Successed_Notification = "WB_Login_Successed_Notification"
+
 class ViewController: UIViewController {
     
     let WB_API_URL_String = "https://api.weibo.com"
@@ -58,6 +61,8 @@ extension ViewController: UIWebViewDelegate {
                 
                 token.saveAccessToken()
                 
+                // 切换UI - 通知
+                NSNotificationCenter.defaultCenter().postNotificationName(WB_Login_Successed_Notification, object: nil)
             }
             
             

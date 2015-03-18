@@ -16,18 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-//        if let token = AccessToken.loadAccessToken() {
-//            
-//            println("\(token.debugDescription)")
-//        }
-//        println("\(SimpleNetwork().cachePath)")
-        
-//        SimpleNetwork().downloadImage("http://ww4.sinaimg.cn/thumbnail/6f1045a5jw1eq7xuvaf5gj20hs0dcgn2.jpg", completion: { (result, error) -> () in
-//            println("OK")
-//        })
-        
         // 统一设置导航栏
         setNavigationBarColor()
+        
+        // 检查token，如果有缓存token，直接显示主页，没有缓存，就显示登录界面，然后用通知跳转
+        if let token = AccessToken.loadAccessToken() {
+            
+            showMainInterface()
+            
+        } else {
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainInterface", name: WB_Login_Successed_Notification, object: nil)
+        }
         
         return true
     }
@@ -37,6 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 一经设置全局有效
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+    }
+    
+    ///  显示主页UI
+    func showMainInterface() {
+        
+        // 通知需要注销
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: WB_Login_Successed_Notification, object: nil)
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        window!.rootViewController = sb.instantiateInitialViewController() as! MainViewController
     }
 
     func applicationWillResignActive(application: UIApplication) {
