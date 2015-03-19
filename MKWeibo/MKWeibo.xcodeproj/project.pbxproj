@@ -17,6 +17,7 @@
 		7A3F43E51AA9D0770086195E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A3F43E11AA9D0770086195E /* SVProgressHUD.bundle */; };
 		7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E31AA9D0770086195E /* SVProgressHUD.m */; };
 		7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */; };
+		7A58E6D21ABA5E2600B5C04F /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58E6D11ABA5E2600B5C04F /* SwiftDictModel.swift */; };
 		7A64720E1AB286E20085895E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A64720D1AB286E20085895E /* Main.storyboard */; };
 		7A6472101AB287430085895E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A64720F1AB287430085895E /* MainViewController.swift */; };
 		7A6472121AB2875D0085895E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6472111AB2875D0085895E /* TabBar.swift */; };
@@ -34,7 +35,6 @@
 		7A6BCBDA1AB67AD300F67567 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BCBD91AB67AD300F67567 /* UserInfo.swift */; };
 		7A6BCBDC1AB67D5600F67567 /* StatusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BCBDB1AB67D5600F67567 /* StatusesData.swift */; };
 		7A6BCBDE1AB71B8F00F67567 /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BCBDD1AB71B8F00F67567 /* String+Hash.swift */; };
-		7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */; };
 		7AA2F29E1AAEE3D30071E336 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +67,7 @@
 		7A3F43E31AA9D0770086195E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetwork.swift; sourceTree = "<group>"; };
 		7A3F43E91AA9D11E0086195E /* MKWeibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKWeibo-Bridge.h"; sourceTree = "<group>"; };
+		7A58E6D11ABA5E2600B5C04F /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		7A64720D1AB286E20085895E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7A64720F1AB287430085895E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7A6472111AB2875D0085895E /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		7A6BCBD91AB67AD300F67567 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		7A6BCBDB1AB67D5600F67567 /* StatusesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesData.swift; sourceTree = "<group>"; };
 		7A6BCBDD1AB71B8F00F67567 /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hash.swift"; sourceTree = "<group>"; };
-		7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = ../../../../../SwiftDictModel/SwiftDictModel/SwiftDictModel/Souces/SwiftDictModel.swift; sourceTree = "<group>"; };
 		7AA2F29D1AAEE3D30071E336 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +189,7 @@
 				7A6BCBDD1AB71B8F00F67567 /* String+Hash.swift */,
 				7A3F43E71AA9D0A10086195E /* SimpleNetwork.swift */,
 				7A3F43CF1AA9D06B0086195E /* NetworkManager.swift */,
-				7A9CF3581AAEE0A600F51FE6 /* SwiftDictModel.swift */,
+				7A58E6D11ABA5E2600B5C04F /* SwiftDictModel.swift */,
 				7A6472281AB2EAD40085895E /* UIView+MK.h */,
 				7A6472291AB2EAD40085895E /* UIView+MK.m */,
 			);
@@ -405,7 +405,6 @@
 				7A3F43E81AA9D0A10086195E /* SimpleNetwork.swift in Sources */,
 				7A64722A1AB2EAD40085895E /* UIView+MK.m in Sources */,
 				7A64721C1AB288CA0085895E /* MessageViewController.swift in Sources */,
-				7A9CF3591AAEE0A600F51FE6 /* SwiftDictModel.swift in Sources */,
 				7A3F43D91AA9D06B0086195E /* NetworkManager.swift in Sources */,
 				7A6BCBDA1AB67AD300F67567 /* UserInfo.swift in Sources */,
 				7A6472221AB2892A0085895E /* ProfileViewController.swift in Sources */,
@@ -413,6 +412,7 @@
 				7A3F43DB1AA9D06B0086195E /* OAuthViewController.swift in Sources */,
 				7A3F43E61AA9D0770086195E /* SVProgressHUD.m in Sources */,
 				7A3F43AD1AA9CFE90086195E /* AppDelegate.swift in Sources */,
+				7A58E6D21ABA5E2600B5C04F /* SwiftDictModel.swift in Sources */,
 				7A6472101AB287430085895E /* MainViewController.swift in Sources */,
 				7A3F43E41AA9D0770086195E /* SVIndefiniteAnimatedView.m in Sources */,
 				7A64722F1AB329D20085895E /* ComposeViewController.swift in Sources */,
