@@ -20,7 +20,6 @@ class SimpleNetwork {
     typealias Completion = (result: AnyObject?, error: NSError?) -> ()
     
     
-    
     // MARK: - 下载图片
     
     ///  缓存路径的常量
@@ -53,20 +52,32 @@ class SimpleNetwork {
     }()
     
     
+    ///  完整的图片缓存路径
+    ///
+    ///  :param: urlString urlString
+    ///
+    ///  :returns: 返回完整的路径
+    func fullImageCachePath(urlString: String) -> String {
+        
+        // 1. 将下载的图像 url 进行 md5
+        let path = urlString.md5
+        
+        // 2. 目标路径
+        return cachePath!.stringByAppendingPathComponent(path)
+    }
     
-    ///  下载图像并保存到沙盒
+    
+    
+    ///  下载单张图像并保存到沙盒
     ///
     ///  :param: urlString  图片路径
     ///  :param: completion 完成回调
     func downloadImage(urlString: String, completion: Completion) {
+       
+        // 1. 目标路径
+        let path = fullImageCachePath(urlString)
         
-        // 1. 将下载的图像 url 进行 md5
-        var path = urlString.md5
-        
-        // 2. 目标路径
-        path = cachePath!.stringByAppendingPathComponent(path)
-        
-        // 2.1 缓存检测，如果文件已经下载完成直接返回
+        // 2 缓存检测，如果文件已经下载完成直接返回
         if NSFileManager.defaultManager().fileExistsAtPath(path) {
             
             completion(result: nil, error: nil)
@@ -136,6 +147,37 @@ class SimpleNetwork {
         }
     }
 
+    ///  异步下载网络图像
+    ///
+    ///  :param: urlString  urlString
+    ///  :param: completion 完成回调
+    func requestImage(urlString: String, _ completion: Completion) {
+        
+        weak var weakSelf = self
+        
+        // 1. 调用 download 下载图像，如果图片已经被缓存过，就不会再次下载
+        downloadImage(urlString, completion: { (result, error) -> () in
+            
+            // 2. 错误处理
+            if error != nil {
+                
+                completion(result: nil, error: error)
+                
+            } else {
+                
+                // 3. 图像是保存在沙盒路径中的，文件名是 url ＋ md5
+                let path = weakSelf?.fullImageCachePath(urlString)
+                
+                // 将图片从沙盒加载到内存
+                var image = UIImage(contentsOfFile: path!)
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    completion(result: image, error: nil)
+                })
+            }
+        })
+    }
     
     
     // MARK: - 请求 JSON

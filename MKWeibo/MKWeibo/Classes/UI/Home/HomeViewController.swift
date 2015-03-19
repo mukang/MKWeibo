@@ -15,7 +15,7 @@ class HomeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadData()
         
         
@@ -51,29 +51,39 @@ class HomeViewController: UITableViewController {
         }
     }
     
-    
-    
-    
-    
-    // MARK: - Table view data source
+}
 
+// MARK: - Table view data source
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return statusesData?.statuses?.count ?? 0
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! StatusCell
         
         let status = statusesData!.statuses![indexPath.row]
         
-        cell.textLabel?.text = status.user!.name
-
+        cell.status = status
+        
         return cell
     }
     
-
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+

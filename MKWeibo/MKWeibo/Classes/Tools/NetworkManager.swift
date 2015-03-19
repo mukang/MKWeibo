@@ -29,6 +29,15 @@ class NetworkManager {
         net.requestJSON(method, urlString, params, completion)
     }
     
+    ///  异步下载网络图像
+    ///
+    ///  :param: urlString  urlString
+    ///  :param: completion 完成回调
+    func requestImage(urlString: String, _ completion: Completion) {
+        
+        net.requestImage(urlString, completion)
+    }
+    
     
     ///  下载图像并保存到沙盒
     ///
