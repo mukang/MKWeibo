@@ -56,6 +56,12 @@ class StatusCell: UITableViewCell {
                     }
                 })
             }
+            
+            // 认证图标
+            vipImage.image = status!.user!.verifiedImage
+            
+            // 会员图标
+            memberImage.image = status!.user!.mbImage
         }
     }
     
