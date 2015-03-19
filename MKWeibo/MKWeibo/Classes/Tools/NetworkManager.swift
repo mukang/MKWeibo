@@ -58,5 +58,15 @@ class NetworkManager {
         net.downloadImages(urlStrings, completion: completion)
     }
     
+    ///  完整的图片缓存路径
+    ///
+    ///  :param: urlString urlString
+    ///
+    ///  :returns: 返回完整的路径
+    func fullImageCachePath(urlString: String) -> String {
+        
+        return net.fullImageCachePath(urlString)
+    }
+    
     
 }

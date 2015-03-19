@@ -9,12 +9,12 @@
         <scene sceneID="A0C-WD-qLn">
             <objects>
                 <tableViewController id="xZU-kk-cLM" customClass="HomeViewController" customModule="MKWeibo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="261" sectionHeaderHeight="22" sectionFooterHeight="22" id="Irn-lV-Nbx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="421" sectionHeaderHeight="22" sectionFooterHeight="22" id="Irn-lV-Nbx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="261" id="keF-7u-823" customClass="StatusCell" customModule="MKWeibo" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="421" id="keF-7u-823" customClass="StatusCell" customModule="MKWeibo" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="keF-7u-823" id="bUN-dT-Mc7">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -29,19 +29,19 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-BY-nXO" userLabel="名字">
                                             <rect key="frame" x="51" y="8" width="36" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-mh-VXX" userLabel="时间">
                                             <rect key="frame" x="51" y="29" width="29" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="117-We-Irc" userLabel="正文">
                                             <rect key="frame" x="8" y="51" width="38" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-3s-VHP" userLabel="会员图标">
@@ -61,9 +61,44 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rk-Tk-anR" userLabel="来源">
                                             <rect key="frame" x="88" y="29" width="29" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-n6-dXy" userLabel="配图视图">
+                                            <rect key="frame" x="8" y="77" width="290" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="290" id="FPe-G0-LR1"/>
+                                                <constraint firstAttribute="height" constant="90" id="aqK-Ne-tiv"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YVy-tp-eRA">
+                                                <size key="itemSize" width="90" height="90"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uk2-9F-EDx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26k-g1-ysG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="26k-g1-ysG" secondAttribute="trailing" id="5Xk-Rx-PRE"/>
+                                                        <constraint firstItem="26k-g1-ysG" firstAttribute="top" secondItem="uk2-9F-EDx" secondAttribute="top" id="7dy-hL-fog"/>
+                                                        <constraint firstAttribute="bottom" secondItem="26k-g1-ysG" secondAttribute="bottom" id="PNE-pb-rpD"/>
+                                                        <constraint firstItem="26k-g1-ysG" firstAttribute="leading" secondItem="uk2-9F-EDx" secondAttribute="leading" id="hYU-us-xhr"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="uAf-pq-cCx" firstAttribute="leading" secondItem="bUN-dT-Mc7" secondAttribute="leadingMargin" id="2dW-UJ-BsF"/>
@@ -77,7 +112,9 @@
                                         <constraint firstItem="dOg-BY-nXO" firstAttribute="leading" secondItem="uAf-pq-cCx" secondAttribute="trailing" constant="8" id="ab4-uh-adc"/>
                                         <constraint firstItem="VcT-mh-VXX" firstAttribute="bottom" secondItem="9rk-Tk-anR" secondAttribute="bottom" id="fEt-Ad-Ckq"/>
                                         <constraint firstItem="117-We-Irc" firstAttribute="top" secondItem="uAf-pq-cCx" secondAttribute="bottom" constant="8" id="nC7-Th-rbx"/>
+                                        <constraint firstItem="117-We-Irc" firstAttribute="leading" secondItem="6b5-n6-dXy" secondAttribute="leading" id="qpo-un-RzB"/>
                                         <constraint firstItem="VcT-mh-VXX" firstAttribute="bottom" secondItem="uAf-pq-cCx" secondAttribute="bottom" id="uNb-aL-xEJ"/>
+                                        <constraint firstItem="6b5-n6-dXy" firstAttribute="top" secondItem="117-We-Irc" secondAttribute="bottom" constant="8" id="uzZ-Qo-zbc"/>
                                         <constraint firstItem="vhm-Sb-gHV" firstAttribute="bottom" secondItem="uAf-pq-cCx" secondAttribute="bottom" constant="4" id="xB1-x2-Ay2"/>
                                         <constraint firstItem="7xy-3s-VHP" firstAttribute="leading" secondItem="dOg-BY-nXO" secondAttribute="trailing" constant="8" id="ysP-mY-Cy5"/>
                                     </constraints>
@@ -87,6 +124,10 @@
                                     <outlet property="iconImage" destination="uAf-pq-cCx" id="8QE-gF-LVJ"/>
                                     <outlet property="memberImage" destination="7xy-3s-VHP" id="NJ2-OF-lEF"/>
                                     <outlet property="nameLabel" destination="dOg-BY-nXO" id="xsV-5i-Hce"/>
+                                    <outlet property="pictureView" destination="6b5-n6-dXy" id="mJe-CO-PKm"/>
+                                    <outlet property="pictureViewHeight" destination="aqK-Ne-tiv" id="cpP-cr-2aR"/>
+                                    <outlet property="pictureViewLayout" destination="YVy-tp-eRA" id="JX6-z5-Xo8"/>
+                                    <outlet property="pictureViewWidth" destination="FPe-G0-LR1" id="IcP-7q-pkx"/>
                                     <outlet property="sourceLabel" destination="9rk-Tk-anR" id="gKB-1C-k9u"/>
                                     <outlet property="timeLabel" destination="VcT-mh-VXX" id="gZ5-yF-eie"/>
                                     <outlet property="vipImage" destination="vhm-Sb-gHV" id="Q4V-IS-7kF"/>
